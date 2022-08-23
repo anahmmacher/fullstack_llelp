@@ -1,9 +1,9 @@
 /.bundle
-/log/*
-/tmp/*
+/log/
+/tmp/
 !/log/.keep
 !/tmp/.keep
-/storage/*
+/storage/
 !/storage/.keep
 /node_modules
 /yarn-error.log
