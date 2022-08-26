@@ -413,7 +413,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
 
       e.preventDefault();
       var user = {
-        email: 'demouser@user.com',
+        email: 'demouser@mail.com',
         password: 'demouser'
       };
       this.props.demologin(user).then(function () {
