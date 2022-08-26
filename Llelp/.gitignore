@@ -1,12 +1,13 @@
 /.bundle
-log
 tmp
+log
 !/log/.keep
 !/tmp/.keep
-/storage/
+/storage/*
 !/storage/.keep
 node_modules
 /yarn-error.log
 /public/assets
 .byebug_history
 /config/master.key
+/config/application.yml
