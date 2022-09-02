@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json} do
     resources :users, only: [:index, :create, :show]
     resource :session, only: [:create, :destroy]
-		resources :businesses, only: [:create, :index, :show]
-
+		resources :businesses, only: [:create, :index, :show] do
 		collection do
-			get :search, to "businesses#search", as: "search"
+			get :search, to: "businesses#search", as: "search"
+		end
 		end
   end
 end

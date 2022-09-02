@@ -1,7 +1,7 @@
 class Api::BusinessesController < ApplicationController
 	def index
-      	@businesses = [bounds ? Business.in_bounds(bounds) : Business.all]
-        
+      	#@businesses = bounds ? Business.in_bounds(bounds) : Business.all
+				@businesses = Business.all
         render :index
   end
 
