@@ -1,4 +1,4 @@
-class Api::BusinessesController < ApplicationController
+uclass Api::BusinessesController < ApplicationController
 	def index
       	#@businesses = bounds ? Business.in_bounds(bounds) : Business.all
 				@businesses = Business.all
@@ -20,12 +20,13 @@ class Api::BusinessesController < ApplicationController
     end
 
 	def search
-		query = params[:q]
-    @businesses = Business.where("name ILIKE ? OR category ILIKE ?", "%#{query}%", "%#{query}%")
+		interest = params[:q1]
+
+    @businesses = Business.find_businesses(interest)
     if (@businesses.length > 0) 
       render :index
     else 
-      render json: ["No results found for #{query}"], status: 404
+      render json: ["No results found for #{interest}"], status: 404
     end
 	end
 
@@ -37,5 +38,13 @@ class Api::BusinessesController < ApplicationController
 
 	def bounds
 		params[:bounds]
+	end
+
+	def q1
+		params[:q1]
+	end
+
+	def q2
+		params[:q2]
 	end
 end

@@ -1,16 +1,32 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import logo1 from '../../../../Llelp/app/assets/images/llelp_logos/llelp_logo_dark_bkgnd.png'
-import logo2 from '../../../../Llelp/app/assets/images/llelp_logos/llelp_logo_light_bkgnd.png'
+import { Link, withRouter } from 'react-router-dom';
+import logo1 from '../../../../Llelp/app/assets/images/llelp_logos/llelp_logo_dark_bkgnd.png';
+import logo2 from '../../../../Llelp/app/assets/images/llelp_logos/llelp_logo_light_bkgnd.png';
 import GreetingContainer from "../greeting/greeting_container";
+import SearchBarContainer from '../search/search_bar_container'
 
 const Header = () =>{
-	return(
-		<div className="header-div">
-			<Link className='header-logo-2' to='/'><img src={logo2} width='75' height='30'/></Link>
-			<GreetingContainer/>
+
+	let headerEle;
+
+	if (this.props.history.location.pathname === '/'){
+
+		headerEle = <div className="home-header-div">
+							<Link className='header-logo-1' to='/'><img src={logo1} width='75' height='30'/></Link>
+							<SearchBarContainer/>
+							<GreetingContainer/>
+						</div>
+	} else {
+		headerEle = <div className="header-div">
+							<Link className='header-logo-2' to='/'><img src={logo2} width='75' height='30'/></Link>
+							<SearchBarContainer/>
+							<GreetingContainer/>
 		</div>
+	}
+
+	return(
+		<div>{headerEle}</div>
 	)
 };
 
-export default Header;
+export default withRouter(Header);

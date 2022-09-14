@@ -1,0 +1,16 @@
+.home-header-div{
+	background: linear-gradient(180deg, #000000b3, #0000004d 72.92%, #0000);
+	color: white;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.header-div {
+	background-color: white;
+	color: black;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+
