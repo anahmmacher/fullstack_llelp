@@ -1,6 +1,6 @@
 import React from "react";
 import icon1 from '../../../../Llelp/app/assets/images/llelp_logos/search_icon.png';
-import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom'
 
 class SearchBar extends React.Component{
 	constructor(props) {
@@ -30,6 +30,7 @@ class SearchBar extends React.Component{
 	}
 
 	render(){
+		return(
 		<div>
         <form className="search-bar-form" onSubmit={this.handleSubmit}>
           <div className="search-find-container">
@@ -38,9 +39,10 @@ class SearchBar extends React.Component{
           <div className="search-near-container">
               <input className="search-near-input" type="text" onChange={this.update('near')} placeholder="address, city, state or zip"/>
           </div>
-          <button className="search-button" type="submit" ><img src={icon1}/></button>
+          <button className="search-button" type="submit" ><img className="spyglass" src={icon1} width='30px' height='30px'/></button>
         </form>
       </div>
+		)
 	}
 }
 

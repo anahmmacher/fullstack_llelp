@@ -20,7 +20,7 @@ uclass Api::BusinessesController < ApplicationController
     end
 
 	def search
-		interest = params[:q1]
+		interest = params[:query]
 
     @businesses = Business.find_businesses(interest)
     if (@businesses.length > 0) 

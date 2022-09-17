@@ -4,17 +4,17 @@ import Third from '../../../../Llelp/app/assets/images/carousel_images/sea-of-su
 
 export default [
   {
-    title: "First Slide",
-    description: "This is the first slider Image of our carousel",
+    title: "Keep your greens green",
+    description: "Landscaping",
     urls: First,
   },
   {
-    title: "Second Slide",
-    description: "This is the second slider Image of our carousel",
+    title: "Leave your car to a pro",
+    description: "Auto Repair",
     urls: Second,
   },
   {
-    title: "Third Slide",
-    description: "This is the Third slider Image of our carousel",
+    title: "Satisfy the craving",
+    description: "Sushi",
     urls: Third,
   }];

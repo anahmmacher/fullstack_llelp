@@ -1,6 +1,6 @@
 import React from "react";
 
-import FilterForm from "./filter_form";
+// import FilterForm from "./filter_form";
 import SearchIndex from "./search_index";
 import BusinessMap from "./business_map";
 

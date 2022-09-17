@@ -24,7 +24,7 @@ export const fetchBusinesses = () => dispatch => (
 );
 
 export const searchBusinesses = query => dispatch => (
-  BusinessUtil.searchBusinesses(query)
+  APIUtil.searchBusinesses(query)
     .then(businesses => dispatch(receiveBusinesses(businesses)))
 );
 
