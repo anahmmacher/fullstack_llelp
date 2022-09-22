@@ -1,0 +1,41 @@
+.homepage-container{
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.news-container {
+	width: 100%;
+	padding-top: 80px;
+	padding-bottom: 90px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-content-container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content:center;
+	background-color: #f7f7f7;
+}
+
+.about-column, .discover-column{
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: baseline;
+}
+
+.about-column > h3, .discover-column > h3{
+
+	margin-bottom: 9px;
+}
+
+.about-list, .discovery-list{
+		list-style-type: none;
+		color: darkgray;
+		margin-left: -40px;
+}
+
+.about-list > li, .discover-list > li {
+	margin-top: 9px;
+}

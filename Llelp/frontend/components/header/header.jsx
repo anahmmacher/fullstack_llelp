@@ -12,21 +12,25 @@ const Header = () =>{
 
 	if (history.location.pathname === '/'){
 
-		headerEle = <div className="home-header-div">
+		headerEle = <div className="home-header-container">
+						<div className="home-header-div">
 							<Link className='header-logo-1' to='/'><img src={logo1} width='75' height='30'/></Link>
-							<SearchBarContainer/>
-							<GreetingContainer/>
+							<SearchBarContainer id="home-search-bar"/>
+							<GreetingContainer id="home-greeting"/>
+						</div>
 						</div>
 	} else {
-		headerEle = <div className="header-div">
+		headerEle = <div className="header-container">
+							<div className="header-div">
 							<Link className='header-logo-2' to='/'><img src={logo2} width='75' height='30'/></Link>
-							<SearchBarContainer/>
-							<GreetingContainer/>
+							<SearchBarContainer id="search-bar"/>
+							<GreetingContainer id="greeting"/>
+		</div>
 		</div>
 	}
 
 	return(
-		<div className="header-container">{headerEle}</div>
+		<>{headerEle}</>
 	)
 };
 

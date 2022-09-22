@@ -22,9 +22,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	border-bottom: solid 1px gainsboro;
 	width: 100%;
 	height: 130px;
-	position: absolute;
+	position: sticky;
 }
 
 .login-signup{
@@ -39,3 +40,24 @@
 	margin-top: 20px;
 }
 
+.header-div .search-bar-form-container .search-bar-form .search-bar-input-container{
+	box-shadow: 0 2px 18px #00000026
+}
+
+.search-bar-input-container{
+	display: flex;
+	flex-direction: row;
+}
+
+.header-div .login-signup #login-div{
+	border: solid gray 1px;
+	cursor: pointer;
+}
+
+.header-div .logo-signup #login-div:hover{
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.header-div .login-signup #login-div a{
+	color: gray
+}

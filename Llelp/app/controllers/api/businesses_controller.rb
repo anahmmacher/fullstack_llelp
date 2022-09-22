@@ -1,4 +1,4 @@
-uclass Api::BusinessesController < ApplicationController
+class Api::BusinessesController < ApplicationController
 	def index
       	#@businesses = bounds ? Business.in_bounds(bounds) : Business.all
 				@businesses = Business.all
@@ -20,13 +20,13 @@ uclass Api::BusinessesController < ApplicationController
     end
 
 	def search
-		interest = params[:query]
+		query = params[:query]
 
-    @businesses = Business.find_businesses(interest)
+    @businesses = Business.find_businesses(query)
     if (@businesses.length > 0) 
       render :index
     else 
-      render json: ["No results found for #{interest}"], status: 404
+      render json: ["No results found for #{query}"], status: 404
     end
 	end
 
@@ -40,11 +40,7 @@ uclass Api::BusinessesController < ApplicationController
 		params[:bounds]
 	end
 
-	def q1
-		params[:q1]
-	end
-
-	def q2
-		params[:q2]
+	def query
+		params[:query]
 	end
 end

@@ -1,0 +1,12 @@
+.right-half{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.index-body{
+	width: 50%;
+	max-height: fit-content;
+	padding-top: 300px;
+	align-self: flex-end;
+}
